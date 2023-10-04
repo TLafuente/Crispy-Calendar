@@ -1,0 +1,106 @@
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000; /* Set a dark background color */
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container-fluid {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Adjust the max-width as needed */
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff; /* Set text color to white */
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #ccc; /* Set text color to light gray */
+}
+
+#currentDay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff; /* Set text color to white */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.time-block {
+  flex: 0 1 calc(25% - 20px); /* Adjust the width as needed, 25% will give 4 time blocks per row */
+  background-color: #333; /* Set a dark gray background color */
+  border: 1px solid #555; /* Set a border color */
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 50%; /* Make the time blocks circular */
+  position: relative;
+}
+
+.hour {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff; /* Set text color to white */
+}
+
+.description {
+  width: 100%;
+  border: none;
+  resize: none;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #fff; /* Set text color to white */
+}
+
+.saveBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #06aed5;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Make the save buttons circular */
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.saveBtn i {
+  font-size: 1rem;
+}
+
+.saveBtn:hover {
+  background-color: #0493ac;
+}
+
+@media (max-width: 768px) {
+  .time-block {
+      flex: 0 1 calc(50% - 20px); /* Adjust the width for smaller screens */
+  }
+}
